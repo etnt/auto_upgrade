@@ -1,0 +1,28 @@
+name: auto_upgrade
+description: >-
+  Checks a GitHub repository's Releases for a newer version of the running
+  Flutter app and reports the result. The consuming app decides how to notify
+  the user and how to open the release page (e.g. via url_launcher).
+version: 0.1.0
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # GETs .../releases/latest from the GitHub REST API.
+  http: ^1.2.0
+  # Persists the last successful check timestamp for throttling.
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Matches the Sky Overhead lint set.
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: false

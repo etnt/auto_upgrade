@@ -1,0 +1,6 @@
+# This file configures the analyzer to check for errors, warnings, and lints.
+# The lint set matches the Sky Overhead app.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
